@@ -1,52 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Cabutan Bertuah</title>
 
-    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="script.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body{
+            text-align:center;
+            font-family:Arial;
+            margin-top:100px;
+        }
+
+        button{
+            padding:10px 20px;
+            font-size:18px;
+        }
+
+        #winner{
+            margin-top:20px;
+            font-size:30px;
+            font-weight:bold;
+        }
+    </style>
 </head>
-<body class="body">
+<body>
 
     <h1>Cabutan Bertuah</h1>
 
-     
-    <button id="draw" class="button">PEMENANG</button>
+    <button id="draw">PEMENANG</button>
 
     <div id="winner">
         Klik butang untuk pilih pemenang
     </div>
-
-    <script>
-        $(document).ready(function () {
-
-            var peserta = [
-                "Natasha",
-                "Tasnim",
-                "Haikal",
-                "Adib",
-                "Suri",
-                "Nadiah",
-                "Ain",
-                "Qyra",
-                "Alya",
-                "Farhan"
-            ];
-
-            $("#draw").click(function () {
-
-                var randomIndex = Math.floor(Math.random() * peserta.length);
-
-                $("#winner").text(
-                    "🎉 Pemenang: " + peserta[randomIndex]
-                );
-
-            });
-
-        });
-    </script>
 
 </body>
 </html>
