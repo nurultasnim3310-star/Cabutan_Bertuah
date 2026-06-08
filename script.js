@@ -1,34 +1,21 @@
 $(document).ready(function(){
 
-    var peserta = [];
+    var peserta = [
+        "Tasnim",
+        "Natasha",
+        "Ain",
+        "Suri",
+        "Nadiah",
+        "Qyra",
+        "Alya"
+    ];
 
-    // Simpan nama peserta
-    $("#tambah").click(function(){
 
-        var nama = $("#nama").val();
-
-        if(nama != ""){
-            peserta.push(nama);
-
-            $("#senarai").append("<li>" + nama + "</li>");
-
-            $("#nama").val("");
-        }
-    });
-
-    
-    $("#pemenang").click(function(){
-
-        if(peserta.length == 0){
-            $("#winner").text("Tiada peserta!");
-            return;
-        }
+    $("#draw").click(function(){
 
         var random = Math.floor(Math.random() * peserta.length);
 
-        $("#winner").text(
-            "🎉 Pemenang: " + peserta[random]
-        );
+        $("#winner").text("🎉 Pemenang: " + peserta[random]);
     });
 
 });
