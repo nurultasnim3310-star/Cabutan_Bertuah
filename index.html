@@ -2,27 +2,38 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Cabutan Bertuah</title>
+    <title>Pemenang Cabutan Bertuah</title>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="jquery-4.0.0.min.js"></script>
     <script src="script.js"></script>
 
     <style>
         body{
-            text-align:center;
-            font-family:Arial;
-            margin-top:100px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input{
+            padding: 8px;
+            width: 200px;
         }
 
         button{
-            padding:10px 20px;
-            font-size:18px;
+            padding: 8px 15px;
+            margin: 5px;
         }
 
         #winner{
-            margin-top:20px;
-            font-size:30px;
-            font-weight:bold;
+            font-size: 30px;
+            font-weight: bold;
+            color: green;
+            margin-top: 20px;
+        }
+
+        ul{
+            list-style: none;
+            padding: 0;
         }
     </style>
 </head>
@@ -30,11 +41,15 @@
 
     <h1>Cabutan Bertuah</h1>
 
-    <button id="draw">PEMENANG</button>
+    <input type="text" id="nama" placeholder="Masukkan nama peserta">
+    <button id="tambah">SIMPAN</button>
 
-    <div id="winner">
-        Klik butang untuk pilih pemenang
-    </div>
+    <h3>Senarai Peserta</h3>
+    <ul id="senarai"></ul>
+
+    <button id="pemenang">PEMENANG</button>
+
+    <div id="winner"></div>
 
 </body>
 </html>
